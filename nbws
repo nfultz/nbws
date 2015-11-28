@@ -21,6 +21,11 @@ python -m mod_pywebsocket.standalone -p 8888 -d . &
 echo $! >$TMP.pid 
 cd - 
 
+
+echo please visit http://$(hostname):8888
+sleep 3
+
+
 newsbeuter
 
 echo $TMP $TMP.pid $TMP.fifo "'$BROWSER'"
