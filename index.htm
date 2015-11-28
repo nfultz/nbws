@@ -1,0 +1,13 @@
+<head>
+<script>
+var sock = new WebSocket("ws://neal-sh97:8888/nbws");
+sock.onopen = function() {
+    document.body.innerHTML = "connected";
+}
+sock.onmessage = function(x) {
+    console.log(x);
+    window.open(x.data);
+};
+</script>
+
+<body>
